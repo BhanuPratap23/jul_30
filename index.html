@@ -1,15 +1,28 @@
 <html>
 <head>
 <title>Demo JavaScript</title>
-<script>
-   var age=prompt("Please enter your age:");
-   var myElement=document.getElementById('sibi');
-   myElement.style.color="green";
-   document.write("<h1> User age is :=<h1>"+age+"</br>");
+<script type="text/javascript">
+   function getcurrdate(){
+var currentdate = new Date();
+var datetime = "Last Sync: " + currentdate.getDay() + "/" + currentdate.getMonth() 
++ "/" + currentdate.getFullYear() + " @ " 
++ currentdate.getHours() + ":" 
++ currentdate.getMinutes() + ":" + currentdate.getSeconds();
+   }
    
 </script>
+ <style type="text/css">
+    #top {
+  border-radius: 25px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+}
+   </style>
 </head>
-<body>
- <p id="sibi">this is demo for embedding css inside jss</p>
+<body onload="getcurrdate()" >
+   <div id="topleft">
+   </div>
 </body>
 </html>
