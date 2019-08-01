@@ -3,17 +3,10 @@
 <title>Demo JavaScript</title>
 <script type="text/javascript">
    function getcurrdate() {
-    var date = new Date();
-    var hours = date.getHours();
-    var days = date.getDay(); 
-    var minutes = date.getMinutes();
-    var ampm = hours >= 12 ? 'pm' : 'am';
-    hours = hours % 12;
-    hours = hours ? hours : 12; // the hour '0' should be '12'
-    minutes = minutes < 10 ? '0'+minutes : minutes;
-    var strTime = date + ' ' + hours + ':' + minutes + ' ' + ampm;
-    return strTime;
-}
+      var today = new Date();
+document.getElementById('dtText').innerHTML=today;
+     
+   }
 
    
 </script>
@@ -29,6 +22,12 @@
 </head>
 <body onload="getcurrdate()" >
    <div id="topleft">
+      <p class="marquee">
+    <span id="dtText"></span>
+      </p>
+      
+   </div>
+   <div id="bottomright>
    </div>
 </body>
 </html>
